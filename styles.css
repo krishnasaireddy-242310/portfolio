@@ -1,0 +1,120 @@
+/* styles.css */
+:root {
+  --main-bg: lch(0.73% 4.63 304.03 / 0.974);
+  --main-text: lab(96.11% -4.06 2.91);
+  --accent-bg: hsla(0, 0%, 0%, 0.905);
+  --accent-text: #fff;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--main-text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+nav a {
+  color: var(--accent-text);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.intro {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 1rem;
+}
+.profile {
+  background: #e00606;
+  border-left: 5px solid var(--accent-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px #d47373;
+}
+h2 {
+  border-bottom: 2px solid var(--main-text);
+  padding-bottom: .25em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+section {
+  max-width: 900px;
+  margin: 0 auto 2em auto;
+  padding: 0 1rem;
+}
+ul {
+  list-style-type: square;
+  padding-left: 1.2em;
+}
+.project {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.project-1 .proj-text-60 {
+  flex: 3 1 60%;
+}
+.project-1 .proj-image-40 {
+  flex: 2 1 40%;
+  display: flex;
+  justify-content: center;
+}
+.project-2 .proj-image-60 {
+  flex: 3 1 60%;
+  display: flex;
+  justify-content: center;
+}
+.project-2 .proj-text-40 {
+  flex: 2 1 40%;
+}
+.project img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--accent-bg);
+  border-radius: 6px;
+  background: #e55353;
+}
+@media (max-width: 800px) {
+  .project {
+    flex-direction: column;
+  }
+  .project-1 .proj-text-60, .project-1 .proj-image-40,
+  .project-2 .proj-image-60, .project-2 .proj-text-40 {
+    flex: 1 1 100%;
+  }
+}
+footer {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+  text-align: center;
+  padding: 2em 1em;
+}
+footer h2 {
+  border: none;
+}
+footer p {
+  margin: 0.5em 0;
+}
